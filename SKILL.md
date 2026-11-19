@@ -62,10 +62,18 @@ Archivos de esta skill:
 1. **Pedido.** Antonio plantea el proyecto o la mejora en el chat de mediación.
 2. **Plan y condiciones.** Muse redacta el plan con condiciones de
    satisfacción claras, medibles y verificables (ver `CONDITIONS_TEMPLATE.md`)
-   y lo discute con Antonio.
+   y lo discute con Antonio. El documento debe ser autocontenido y pasar la
+   **prueba de comprensión**: leído en frío, sin el chat que lo originó, un
+   tercero reconstruye qué se quiere y cómo se sabrá que quedó. Si el cambio
+   es de código, las condiciones incluyen los archivos que se espera crear,
+   modificar o borrar, para auditar también el diff contra el plan.
 3. **Opinión del constructor.** Muse pasa el plan al desarrollador, que opina
-   SIN construir: viabilidad, riesgos, alternativas. Muse trae la opinión a
-   Antonio; se ajustan las condiciones y Antonio aprueba.
+   SIN construir: viabilidad, riesgos, alternativas. La opinión pasa la idea
+   por lentes explícitas (¿hace falta de verdad o es YAGNI?, costo, migración
+   y compatibilidad, deuda técnica) y cierra con un resumen de 2–3 frases de
+   lo que el constructor entendió que se va a hacer: esa es la **puerta de
+   preparación**, y sin su confirmación explícita no se construye. Muse trae
+   la opinión a Antonio; se ajustan las condiciones y Antonio aprueba.
 4. **Construcción en pruebas.** El desarrollador construye solo en el entorno
    de pruebas, con respaldo previo de la base cuando la tanda toca datos.
 5. **Entrega.** El desarrollador abre (o comenta) el issue «Listo para
@@ -83,7 +91,10 @@ Archivos de esta skill:
    punto (corregido / parcial / no corregido / no verificable), evidencia breve
    y conteo final. Si algo falla: lista de correcciones, timbre al
    desarrollador y se vuelve al paso 4 con esa lista (una sola lista
-   consolidada, no goteo de puntos).
+   consolidada, no goteo de puntos). El constructor puede **contestar** un
+   hallazgo con justificación técnica en vez de corregirlo a ciegas (formato D
+   de `ISSUE_TEMPLATE.md`); si la contestación se acepta, el punto se cierra
+   como **trade-off aceptado**, documentado en el issue.
 8. **Producción y cierre.** Con todo «corregido», Muse da luz verde; el
    desarrollador aplica a producción; Muse verifica en producción lo mismo
    que auditó en pruebas y cierra el issue. El resultado durable se registra
@@ -97,6 +108,13 @@ Archivos de esta skill:
   se audite dos veces.
 - Los reportes llegan al chat que Antonio eligió para ese proyecto. Si Antonio
   sigue un tema en otro chat (p. ej. WhatsApp), el reporte va también ahí.
+
+## Mantenimiento
+
+- **Deriva:** periódicamente se compara lo que corre en producción contra las
+  últimas especificaciones e issues cerrados; toda divergencia no documentada
+  se abre como hallazgo nuevo.
+- **Poda:** ver el principio 10.
 
 ## Arranque en un proyecto nuevo
 

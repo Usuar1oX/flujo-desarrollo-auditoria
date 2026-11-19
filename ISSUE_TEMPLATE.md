@@ -73,3 +73,18 @@ verificación en producción también pasó.
 **Corrección esperada:**
 <qué debe quedar true al re-auditar>
 ```
+
+## D) Contestación del desarrollador — cuando no está de acuerdo con un hallazgo
+
+```
+## Contestación — punto <n> de <tanda / issue>
+
+**Postura:** lo contesto, no lo corrijo.
+**Justificación:** <mecanismo, evidencia o trade-off que lo respalda.>
+**Propuesta:** cerrarlo como trade-off aceptado, con esta justificación citada.
+```
+
+Reglas: contestar es válido solo con justificación técnica y evidencia, nunca
+con «así está bien». Si Muse y Antonio aceptan la contestación, el punto se
+cierra como **trade-off aceptado** en el veredicto, citando la justificación;
+si no se acepta, el punto sigue como corrección requerida.

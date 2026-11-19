@@ -52,6 +52,15 @@ poder comprobarse en vivo con un dato, una pantalla o un conteo.
   después de la tanda, y TODA diferencia fuera de la lista aprobada de cambios
   cuenta como defecto, aunque la suite esté en verde.
 
+## Archivos que se espera tocar (si el cambio es de código)
+
+- Crear: <…>
+- Modificar: <…>
+- Borrar: <…>
+
+(Todo archivo tocado fuera de esta lista se explica en la entrega o cuenta
+como desviación del plan; el diff también se audita.)
+
 ## Entorno y suite
 
 - Se construye SOLO en pruebas hasta la luz verde de Muse.
