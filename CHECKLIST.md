@@ -4,6 +4,9 @@
 
 - [ ] Leer las condiciones de satisfacción de la tanda y convertir CADA
       afirmación del desarrollador en un punto de checklist propio.
+- [ ] Releer el pedido original de Antonio: lo que se audita debe seguir
+      diciendo lo que él pidió (sin deriva de especificación entre el pedido,
+      las condiciones y lo construido).
 - [ ] Confirmar que el commit desplegado es el commit entregado (HEAD en el
       servidor) y que el sitio está quieto; si hay despliegue en curso, no
       auditar: avisar y esperar.
@@ -55,6 +58,17 @@
 - [ ] Enlaces y botones de la zona tocada, uno por uno.
 - [ ] Correr la suite completa en el entorno auditado cuando sea posible;
       el «verde» del desarrollador se confirma, no se hereda.
+- [ ] Pruebas inestables (flaky): prohibido reintentar hasta que pasen o
+      agregar esperas para disimularlas; se encuentra la causa raíz o se
+      borra la prueba dejando el motivo escrito.
+
+## Re-auditorías
+
+- [ ] Apuntar a los puntos fallidos y a la regresión de la zona tocada,
+      apoyándose en las rondas anteriores; no re-checar todo desde cero
+      salvo sospecha fundada.
+- [ ] Si un punto suma su tercera ronda sin pasar, detener la iteración y
+      escalarlo a Antonio con el resumen del desacuerdo.
 
 ## Cierre
 

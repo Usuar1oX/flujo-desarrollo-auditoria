@@ -40,6 +40,18 @@ poder comprobarse en vivo con un dato, una pantalla o un conteo.
   <sí/no y a dónde.>
 - Respaldo previo obligatorio: <ruta del respaldo.>
 
+## Invariantes (lo que nunca puede romperse)
+
+- <Ej.: los conteos nunca bajan; aplicar la tanda dos veces produce el mismo
+  resultado que aplicarla una (idempotencia); ningún registro puede quedar
+  sin <X>; los saldos nunca son negativos; toda ficha removida responde 301.>
+
+## Oráculo diferencial
+
+- El estado anterior (el respaldo) es el oráculo: se compara lo mismo antes y
+  después de la tanda, y TODA diferencia fuera de la lista aprobada de cambios
+  cuenta como defecto, aunque la suite esté en verde.
+
 ## Entorno y suite
 
 - Se construye SOLO en pruebas hasta la luz verde de Muse.

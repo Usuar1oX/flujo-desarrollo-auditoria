@@ -23,6 +23,10 @@ desarrollador. Sin contraseñas, sin datos reales; solo datos de prueba.
 ## Suite
 - <n> pruebas, <n> aserciones, en verde. Comando: <…>
 
+## Evidencia adjunta
+<Capturas, archivos exportados o salidas que respaldan las afirmaciones.
+Una afirmación sin evidencia se audita como «no verificable» hasta tenerla.>
+
 ## Sitio quieto
 Confirmo que no hay despliegues en curso y el entorno queda quieto para la auditoría.
 ```
@@ -36,6 +40,9 @@ si un punto quedó a medias, se declara a medias en la propia entrega.
 ## Veredicto de auditoría — <tanda>
 
 1. <Afirmación> — **corregido** / **parcial** / **no corregido** / **no verificable**
+   Severidad si no quedó corregido: **bloqueante** / **menor** / **detalle** /
+   **preexistente** (preexistente = el defecto ya estaba antes de la tanda; no
+   se le carga a esta tanda, se anota para su propia tanda).
    Evidencia: <pasos, valores exactos, conteos, URL o captura.>
 2. …
 

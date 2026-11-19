@@ -43,6 +43,19 @@ Archivos de esta skill:
 6. **El registro es GitHub; el timbre es el canal vivo.** Los issues guardan la
    historia auditable; los mensajes cortos por el canal vivo solo despiertan al
    constructor (ver `CHANNELS.md`).
+7. **Verificación por capas, barata primero.** Durante el desarrollo se corren
+   solo las pruebas del módulo tocado; la suite completa corre una vez, en la
+   puerta a producción. Una tanda no paga la suite entera en cada intento.
+8. **El cambio no modifica su propia verificación.** Las condiciones, el
+   checklist y la suite que juzga viven fuera del alcance de la tanda juzgada;
+   tocarlos requiere su propia tanda aprobada.
+9. **Tres rondas y se escala.** Si un punto no pasa tras 3 rondas de corrección
+   y re-auditoría, deja de iterarse entre agentes: se escala a Antonio con el
+   resumen del desacuerdo.
+10. **Las reglas también se podan.** Suites, reglas y esta misma skill solo
+    crecen si se dejan; periódicamente se corre una tanda de poda (pruebas
+    obsoletas, reglas duplicadas, callejones superados) para que el ciclo no
+    se vuelva más lento cada mes.
 
 ## El ciclo (por tanda)
 
@@ -61,7 +74,11 @@ Archivos de esta skill:
 6. **Auditoría.** Muse verifica cada afirmación en vivo con `CHECKLIST.md`:
    flujo completo como usuario, el valor guardado detrás de la pantalla,
    conteos contra respaldo, ambas vistas (móvil primero si el producto es
-   móvil), y la suite corrida por el propio Muse cuando sea posible.
+   móvil), y la suite corrida por el propio Muse cuando sea posible. Muse
+   audita desde las condiciones y el producto, NO desde el relato del
+   constructor: su contexto es la especificación y la evidencia, y antes de
+   dar luz verde relee el pedido original de Antonio para confirmar que las
+   condiciones no derivaron de lo que él pidió.
 7. **Veredicto.** Muse publica UN comentario en el issue con veredicto por
    punto (corregido / parcial / no corregido / no verificable), evidencia breve
    y conteo final. Si algo falla: lista de correcciones, timbre al
